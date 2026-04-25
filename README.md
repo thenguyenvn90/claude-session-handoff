@@ -1,5 +1,9 @@
 # claude-session-handoff
 
+[![CI](https://github.com/thenguyenvn90/claude-session-handoff/actions/workflows/ci.yml/badge.svg)](https://github.com/thenguyenvn90/claude-session-handoff/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/github/v/release/thenguyenvn90/claude-session-handoff)](https://github.com/thenguyenvn90/claude-session-handoff/releases)
+
 A Claude Code skill that produces a structured end-of-session handoff so you can `/clear` context without losing continuity. The next agent picks up by reading the summary alone — no files written, no memory updated.
 
 ## What it does
