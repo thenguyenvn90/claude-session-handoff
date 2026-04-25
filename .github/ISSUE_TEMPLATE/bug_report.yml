@@ -1,0 +1,51 @@
+name: Bug Report
+description: The skill produces unexpected output or doesn't trigger
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for reporting a bug. Please fill in as much as you can."
+
+  - type: dropdown
+    id: trigger
+    attributes:
+      label: Trigger phrase used
+      options:
+        - "session handoff"
+        - "wrap up session"
+        - "hand off"
+        - "handoff summary"
+        - "let's wrap up"
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Paste the output if possible.
+    validations:
+      required: true
+
+  - type: input
+    id: skill-version
+    attributes:
+      label: SKILL.md version
+      description: "Check the first line of SKILL.md — name field value"
+      placeholder: "session-handoff"
+
+  - type: input
+    id: claude-version
+    attributes:
+      label: Claude Code version
+      description: Run `claude --version` in your terminal
+      placeholder: e.g. 1.x.x

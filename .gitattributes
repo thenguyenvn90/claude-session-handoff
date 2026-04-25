@@ -1,0 +1,3 @@
+# GitHub Linguist overrides
+# Ensure .md files are detected so the language bar stays populated
+*.md linguist-detectable
