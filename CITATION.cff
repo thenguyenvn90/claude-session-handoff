@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "claude-session-handoff"
+abstract: "A Claude Code skill that produces a structured end-of-session handoff so you can /clear context without losing continuity. The next agent picks up by reading the summary alone."
+version: "1.0.0"
+date-released: "2026-04-25"
+authors:
+  - name: "Ong Bo IT"
+url: "https://github.com/thenguyenvn90/claude-session-handoff"
+repository-code: "https://github.com/thenguyenvn90/claude-session-handoff"
+license: MIT
+keywords:
+  - claude-code
+  - skill
+  - session-handoff
+  - context-management
+  - ai-agent
