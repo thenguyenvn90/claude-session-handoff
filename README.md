@@ -29,6 +29,13 @@ cp SKILL.md ~/.claude/skills/session-handoff.md
 Copy-Item SKILL.md "$env:USERPROFILE\.claude\skills\session-handoff.md"
 ```
 
+Or download single file directly without cloning:
+
+```bash
+curl -o ~/.claude/skills/session-handoff.md \
+  https://raw.githubusercontent.com/thenguyenvn90/claude-session-handoff/master/SKILL.md
+```
+
 Then start a new Claude Code session. The skill activates automatically on trigger phrases.
 
 ## Usage
@@ -40,6 +47,20 @@ session handoff
 ```
 
 or `wrap up session` / `hand off` / `let's wrap up`. Claude produces the handoff in chat. Paste it into the next session's first message — done.
+
+## Tutorial
+
+For a full walkthrough with comparison of 9 session handoff implementations, 5 production triggers, customization patterns, and dual-tool (Claude Code + Codex CLI) workflow, see:
+
+📖 **[Session Handoff Claude Code: Skill Tiết Kiệm Context 2026](https://ongboit.com/session-handoff-claude-code/)** (Vietnamese)
+
+The tutorial covers:
+- 9 implementation comparison matrix (this repo + 8 alternatives)
+- When to trigger handoff (5 production scenarios)
+- Customization for Vietnamese trigger phrases and cost tracking
+- Anti-pattern: why you should pick 1 skill, not stack multiple
+- Cross-tool handoff workflow (Claude Code → Codex CLI)
+- 3 sharp edges from production testing (47 PRs measured)
 
 ## Example output
 
@@ -85,6 +106,16 @@ Writing the handoff to a file creates a management problem: where does it live, 
 ## Why fixed structure?
 
 Every handoff has the same 7 sections in the same order. A fresh agent can scan for `## Pick up here` in under a second. Structure stability is the whole point — if sections appear sometimes and not others, the next agent has to read everything to know what's missing.
+
+## Contributing
+
+PRs welcome for:
+- Additional trigger phrases (especially non-English: Vietnamese, Spanish, Japanese)
+- Output template improvements
+- Worked examples for different domains (data science, devops, web dev)
+- Documentation translations
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
